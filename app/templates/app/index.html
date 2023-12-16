@@ -27,6 +27,7 @@
     <link href="{% static 'app/css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'app/css/fontawesome-all.css' %}" rel="stylesheet">
 	<link href="{% static 'app/css/styles.css' %}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	
 	<!-- Favicon  -->
     <link rel="icon" href="{% static 'app/images/favicon.png' %}">
@@ -264,7 +265,7 @@
                     <div class="text-container">
                         <div class="image-container">
                             <a href="project.html">
-                                <img class="img-fluid" src="{% static 'app/images/project-1.jpg' %}" alt="alternative">
+                                <img class="img-fluid" src="{% static 'app/images/imodels.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
                         <p><strong>For:</strong> Jumbotron, <strong>Project:</strong> web design for their corporate websites and landing pages for marketing campaigns <a class="blue" href="project.html">details</a></p>
@@ -373,17 +374,17 @@
 
 
     <!-- Testimonials -->
-    <div class="cards-1">
+    <!-- <div class="cards-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="h2-heading">A few words from people that chose to work with me</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
+                </div> end of col
+            </div> end of row
             <div class="row">
                 <div class="col-lg-12">
                     
-                    <!-- Card -->
+                    Card
                     <div class="card">
                         <div class="card-body">
                             <p class="testimonial-text">“Mark is a skilled developer which will do everything possible to deliver the project on time and I really appreciate that”</p>
@@ -392,13 +393,13 @@
                                 <div class="text">
                                     <div class="testimonial-author">Samantha Bloom</div>
                                     <div class="occupation">Team Leader - Syncnow</div>
-                                </div> <!-- end of text -->
-                            </div> <!-- end of testimonial-details -->
+                                </div> end of text
+                            </div> end of testimonial-details
                         </div>
                     </div>
-                    <!-- end of card -->
+                    end of card
 
-                    <!-- Card -->
+                    Card
                     <div class="card">
                         <div class="card-body">
                             <p class="testimonial-text">“Loved to work with Mark he's such an awesome developer with great attention to details. He also has a great eye for design”</p>
@@ -407,13 +408,13 @@
                                 <div class="text">
                                     <div class="testimonial-author">John Rowling</div>
                                     <div class="occupation">Marketing Manager - Nexlite</div>
-                                </div> <!-- end of text -->
-                            </div> <!-- end of testimonial-details -->
+                                </div> end of text
+                            </div> end of testimonial-details
                         </div>
                     </div>
-                    <!-- end of card -->
+                    end of card
 
-                    <!-- Card -->
+                    Card
                     <div class="card">
                         <div class="card-body">
                             <p class="testimonial-text">“So glad we started working with Mark. We've used many times his design and development skills for our inhouse online projects”</p>
@@ -422,16 +423,16 @@
                                 <div class="text">
                                     <div class="testimonial-author">Lana Smith</div>
                                     <div class="occupation">General Manager - Shifter</div>
-                                </div> <!-- end of text -->
-                            </div> <!-- end of testimonial-details -->
+                                </div> end of text
+                            </div> end of testimonial-details
                         </div>
                     </div>
-                    <!-- end of card -->
+                    end of card
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-1 -->
+                </div> end of col
+            </div> end of row
+        </div> end of container -->
+    <!-- </div> end of cards-1 -->
     <!-- end of testimonials -->
 
 
@@ -447,13 +448,13 @@
 
 
     <!-- Questions -->
-    <div class="accordion-1">
+    <!-- <div class="accordion-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="h2-heading">Frequent questions</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
+                </div> end of col
+            </div> end of row
             <div class="row">
                 <div class="col-lg-12">
 
@@ -518,15 +519,15 @@
                                 </div>
                             </div>
                         </div>
-                    </div> <!-- end of accordion -->
+                    </div> end of accordion
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of accordion-1 -->
-    <!-- end of questions -->
+                </div> end of col
+            </div> end of row
+        </div> end of container
+    </div> end of accordion-1
+    end of questions -->
 
-
+    
     <!-- Contact -->
     <div id="contact" class="form-1 bg-gray">
         <div class="container">
@@ -539,23 +540,23 @@
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
-                    
                     <!-- Contact Form -->
                     <form id="contactForm">
+                        {% csrf_token %}
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
+                            <input type="text" name="name" class="form-control-input" id="cname" required>
                             <label class="label-control" for="cname">Name</label>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
+                            <input type="tel" name="phone" class="form-control-input" id="cphone" required>
+                            <label class="label-control" for="cphone">Phone</label>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
+                            <textarea class="form-control-textarea" name="message" id="cmessage" required></textarea>
                             <label class="label-control" for="cmessage">Project details</label>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">Submit</button>
+                            <button type="button" class="form-control-submit-button" onclick="submitContactForm()">Submit</button>
                         </div>
                     </form>
                     <!-- end of contact form -->
@@ -565,6 +566,7 @@
         </div> <!-- end of container -->
     </div> <!-- end of form-1 -->  
     <!-- end of contact -->
+    <!-- <div id="response-message"></div> -->
 
 
     <!-- Footer -->
@@ -634,6 +636,34 @@
     
     	
     <!-- Scripts -->
+    <script>
+        function submitContactForm() {
+            var formData = {};
+            $('#contactForm').serializeArray().forEach(function (field) {
+                formData[field.name] = field.value;
+            });
+
+            $.ajax({
+                url: '{% url "app:home" %}',
+                type: 'POST',
+                data: $('#contactForm').serialize(),
+                success: function (response) {
+                    // $('#response-message').text(response.message);
+                    // $('#contactForm')[0].reset();
+
+                    var confirmation = confirm(response.message);
+                    if (confirmation) {
+                        window.location.href = '{% url "app:home" %}';
+                    } else {
+                        location.reload();
+                    }
+                },
+                error: function (error) {
+                    $('#response-message').text('Error: ' + error.responseJSON);
+                }
+            });
+        }
+    </script>
     <script src="{% static 'app/js/jquery.min.js' %}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="{% static 'app/js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
     <script src="{% static 'app/js/jquery.easing.min.js' %}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
