@@ -7,8 +7,8 @@ from django.http import JsonResponse
 
 from .forms import GetInTouchForm
 
-# def home(request):
-#     return render(request, 'app/index.html')
+def home(request):
+    return render(request, 'app/index.html')
 
 def my_resume_download_view(request):
     """The My Resume Download View
