@@ -23,6 +23,7 @@
     
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/850b43de8f.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link href="{% static 'app/css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'app/css/fontawesome-all.css' %}" rel="stylesheet">
@@ -59,7 +60,10 @@
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#services">Services</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#projects">Projects</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
                             <a class="dropdown-item page-scroll" href="project.html">Project Details</a>
@@ -68,13 +72,13 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
                         </div>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
                 <span class="nav-item social-icons">
-                    <span class="fa-stack">
+                    <!-- <span class="fa-stack">
                         <a href="#your-link">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-facebook-f fa-stack-1x"></i>
@@ -85,7 +89,25 @@
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-twitter fa-stack-1x"></i>
                         </a>
+                    </span> -->
+                    <span class="fa-stack">
+                        <a href="https://t.me/jobir_umirov">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-telegram fa-stack-1x"></i>
+                        </a>
                     </span>
+                    <span class="fa-stack">
+                        <a href="https://www.linkedin.com/in/jobir-umirov-7a02b717a/">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-linkedin-in fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="https://github.com/UmirovJobir">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-github fa-stack-1x"></i>
+                        </a>
+                    </span>                    
                 </span>
             </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->
@@ -309,7 +331,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="text-container">
+                    <div class="text-container-card">
                         <div class="image-container">
                             <a href="https://imodels.uz/">
                                 <img class="img-fluid" src="{% static 'app/images/imodels.png' %}" alt="alternative">
@@ -320,7 +342,7 @@
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-4">
-                    <div class="text-container">
+                    <div class="text-container-card">
                         <div class="image-container">
                             <a href="https://agrozamin.uz/">
                                 <img class="img-fluid" src="{% static 'app/images/agrozamin.png' %}" alt="alternative">
@@ -331,7 +353,7 @@
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-4">
-                    <div class="text-container">
+                    <div class="text-container-card">
                         <div class="image-container">
                             <a href="https://asr.gov.uz/">
                                 <img class="img-fluid" src="{% static 'app/images/strategy_agency.png' %}" alt="alternative">
@@ -345,33 +367,36 @@
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="text-container">
+                    <div class="text-container-card">
                         <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="{% static 'app/images/work-4.jpg' %}" alt="alternative">
+                            <a href="https://dr-boboev.com/">
+                                <img class="img-fluid" src="{% static 'app/images/dr-boboev.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Nextlite, <strong>Project:</strong> created a custom video editing and upload web app <a class="blue" href="project.html">details</a></p>
+                        <p><strong>For:</strong> Dr-Boboev
+                            <!-- <strong>Project:</strong> created a custom video editing and upload web app <a class="blue" href="project.html">details</a></p> -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-4">
-                    <div class="text-container">
+                    <div class="text-container-card">
                         <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="{% static 'app/images/work-5.jpg' %}" alt="alternative">
+                            <a href="https://www.agros.uz/">
+                                <img class="img-fluid" src="{% static 'app/images/agros.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Syncnow, <strong>Project:</strong> web design for their corporate websites and landing pages <a class="blue" href="project.html">details</a></p>
+                        <p><strong>For:</strong> Uzagrosugurta
+                             <!-- <strong>Project:</strong> web design for their corporate websites and landing pages <a class="blue" href="project.html">details</a></p> -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-4">
-                    <div class="text-container">
+                    <div class="text-container-card">
                         <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="{% static 'app/images/work-6.jpg' %}" alt="alternative">
+                            <a href="https://endo.uz/">
+                                <img class="img-fluid" src="{% static 'app/images/endo.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Shifter, <strong>Project:</strong> started a new website from ground up for a new product <a class="blue" href="project.html">details</a></p>
+                        <p><strong>For:</strong> EndoSystems
+                             <!-- <strong>Project:</strong> started a new website from ground up for a new product <a class="blue" href="project.html">details</a></p> -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -548,6 +573,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <!-- Contact Form -->
+                    <div id="response-message"></div>
                     <form id="contactForm">
                         {% csrf_token %}
                         <div class="form-group">
@@ -555,7 +581,7 @@
                             <label class="label-control" for="cname">Name</label>
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="phone" class="form-control-input" id="cphone" required>
+                            <input type="tel" name="phone" class="form-control-input" id="cphone" value="998" required>
                             <label class="label-control" for="cphone">Phone</label>
                         </div>
                         <div class="form-group">
@@ -582,7 +608,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="social-container">
-                        <span class="fa-stack">
+                        <!-- <span class="fa-stack">
                             <a href="#your-link">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-facebook-f fa-stack-1x"></i>
@@ -611,7 +637,25 @@
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-youtube fa-stack-1x"></i>
                             </a>
+                        </span> -->
+                        <span class="fa-stack">
+                            <a href="https://t.me/jobir_umirov">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fa-brands fa-telegram fa-stack-1x"></i>
+                            </a>
                         </span>
+                        <span class="fa-stack">
+                            <a href="https://www.linkedin.com/in/jobir-umirov-7a02b717a/">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fa-brands fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://github.com/UmirovJobir">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fa-brands fa-github fa-stack-1x"></i>
+                            </a>
+                        </span>     
                     </div> <!-- end of social-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -625,18 +669,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © <a class="no-line" href="#your-link">Your name</a></p>
+                    <p class="p-small">© <a class="no-line" href="#your-link">2023 jobir.uz</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
 
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <p class="p-small">Distributed By <a class="no-line" href="https://themewagon.com/">Themewagon</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
+                </div> end of col
+            </div> enf of row
+        </div> end of container -->
         
     </div> <!-- end of copyright --> 
     <!-- end of copyright -->
@@ -645,17 +689,12 @@
     <!-- Scripts -->
     <script>
         function submitContactForm() {
-            var formData = {};
-            $('#contactForm').serializeArray().forEach(function (field) {
-                formData[field.name] = field.value;
-            });
-
             $.ajax({
                 url: '{% url "app:contact" %}',
                 type: 'POST',
                 data: $('#contactForm').serialize(),
                 success: function (response) {
-                    // $('#response-message').text(response.message);
+                    $('#response-message').text(response.message);
                     // $('#contactForm')[0].reset();
 
                     var confirmation = confirm(response.message);
@@ -666,7 +705,7 @@
                     }
                 },
                 error: function (error) {
-                    $('#response-message').text('Error: ' + error.responseJSON);
+                    $('#response-message').text('Error: ' + error.responseJSON.data);
                 }
             });
         }
