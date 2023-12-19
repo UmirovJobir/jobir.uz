@@ -22,12 +22,11 @@ def my_resume_download_view(request):
 def contact_view(request):
     if request.method == 'POST':
         form = GetInTouchForm(request.POST)
-        print(form.data)
         if form.is_valid():
             form.save()
-            return JsonResponse({'message': 'Thank you for your message! We will get in touch with you soon.'})
+            return JsonResponse({'status': 'success', 'message': 'Thank you for your message! We will get in touch with you soon.'})
         else:
-            return JsonResponse({'error': 'Invalid form submission.'}, status=400)
+            return JsonResponse({'status': 'error', 'message': 'Invalid form submission.'}, status=400)
     else:
         form = GetInTouchForm()
     return render(request, 'app/index.html', {'form': form})
