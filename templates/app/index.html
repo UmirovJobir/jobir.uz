@@ -31,7 +31,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="{% static 'app/images/favicon.png' %}">
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
@@ -41,8 +41,6 @@
             
             <!-- Image Logo -->
             <a class="navbar-brand logo-image" href="{% url 'app:home' %}">Jobir</a>  <!--<img alt="alternative"> src="{% static 'app/images/logo.svg' %}"-->
-            <!-- <a class="navbar-brand logo-image" href="{% url 'app:home' %}"><img src="{% static 'app/images/Jobir.png' %}"></a>  <img alt="alternative"> src="{% static 'app/images/letter-j.png' %}" -->
-            <!-- <img src="{% static 'app/images/J-logo.png' %}"> -->
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Mark</a> -->
@@ -597,7 +595,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <!-- Contact Form -->
-                    <div id="response-message"></div>
+                    <div id="error-message" style="color: red;"></div>
                     <form id="contactForm">
                         {% csrf_token %}
                         <div class="form-group">
@@ -609,7 +607,7 @@
                             <label class="label-control" for="cphone">Phone</label>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control-textarea" name="message" id="cmessage" required></textarea>
+                            <textarea class="form-control-textarea" name="message" id="cmessage"></textarea>
                             <label class="label-control" for="cmessage">Project details</label>
                         </div>
                         <div class="form-group">
@@ -712,6 +710,7 @@
     	
     <!-- Scripts -->
     <script>
+        
         function submitContactForm() {
             $.ajax({
                 url: '{% url "app:contact" %}',
@@ -729,7 +728,7 @@
                     }
                 },
                 error: function (error) {
-                    $('#response-message').text('Error: ' + error.responseJSON.data);
+                    $('#error-message').text('Error: Phone must be in the format 998901234567');
                 }
             });
         }
