@@ -275,7 +275,7 @@ a:hover {
 
 .form-control-input,
 .form-control-select {
-	display: block; /* needed for proper display of the label in Firefox, IE, Edge */
+	display: block; /*needed for proper display of the label in Firefox, IE, Edge*/
 	width: 100%;
 	padding-top: 1.125rem;
 	padding-bottom: 0.125rem;
@@ -286,7 +286,7 @@ a:hover {
 	font-size: 0.875rem;
 	line-height: 1.875rem;
 	transition: all 0.2s;
-	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
+	-webkit-appearance: none; /*removes inner shadow on form inputs on ios safari*/
 }
 
 .form-control-select {
@@ -297,7 +297,7 @@ a:hover {
 }
 
 select {
-    /* you should keep these first rules in place to maintain cross-browser behavior */
+    /*you should keep these first rules in place to maintain cross-browser behavior*/
     -webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
@@ -310,9 +310,9 @@ select {
 }
 
 .form-control-textarea {
-	display: block; /* used to eliminate a bottom gap difference between Chrome and IE/FF */
+	display: block; /*used to eliminate a bottom gap difference between Chrome and IE/FF*/
 	width: 100%;
-	height: 14rem; /* used instead of html rows to normalize height between Chrome and IE/FF */
+	height: 14rem; /*used instead of html rows to normalize height between Chrome and IE/FF*/
 	padding-top: 1.5rem;
 	padding-left: 1.3125rem;
 	border: 1px solid #cbcbd1;
@@ -327,7 +327,7 @@ select {
 .form-control-select:focus,
 .form-control-textarea:focus {
 	border: 1px solid #a1a1a1;
-	outline: none; /* Removes blue border on focus */
+	outline: none; /*Removes blue border on focus*/
 }
 
 .form-control-input:hover,
@@ -1286,3 +1286,97 @@ a:hover.back-to-top {
 }
 
 
+.btn-rounded {
+	border-radius: 100px;
+}
+
+.btn {
+	position: relative;
+	margin-top: 20px;
+	border-radius: 20px;
+	padding: 8px 15px;
+}
+.btn-outline-primary {
+	color: #0b36a8;
+	border-color: #0b36a8;
+}
+  
+.btn-outline-primary:hover {
+	color: #fff;
+	background-color: #0b36a8;
+	border-color: #0b36a8;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+	box-shadow: 0 0 0 0.2rem rgba(105, 90, 166, 0.5);
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+	color: #0b36a8;
+	background-color: transparent;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+	color: #fff;
+	background-color: #0b36a8;
+	border-color: #0b36a8;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(105, 90, 166, 0.5);
+}
+
+.mt-4,
+.my-4 {
+  margin-top: 1.5rem !important;
+}
+
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+textarea:focus + .label-control {
+    border-color: #4CAF50;
+}
+
+input[type="text"].notEmpty,
+input[type="tel"].notEmpty,
+textarea.notEmpty + .label-control {
+    border-color: #4CAF50;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

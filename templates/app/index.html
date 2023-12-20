@@ -140,6 +140,7 @@
                     <div class="text-container first">
                         <h2>Hi there I'm Jobir,</h2>
                         <p>And I love to create beautiful and efficient websites for my customers. I love going through the entire process with the customer from concept, to design and then development and launch</p>
+                        <button class="btn-rounded btn btn-outline-primary mt-4" onclick="redirectToCV()"><img src="{% static 'app/images/profile.png'%}" width="25">&nbsp;&nbsp;My Resume</button>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-4">
@@ -224,7 +225,6 @@
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg">
                                 <img src="{% static 'app/images/aiogram.png' %}" alt="alternative">
-                                <img src="{% static 'app/images/ci_cd.jpeg' %}" alt="alternative">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain-wordmark.svg">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg">
@@ -234,6 +234,12 @@
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg">
+                                <img src="{% static 'app/images/ci_cd.jpeg' %}" alt="alternative">
+                                <img src="{% static 'app/images/details-icon-html.png' %}" alt="alternative">
+                                <img src="{% static 'app/images/details-icon-css.png' %}" alt="alternative">
+                                <img src="{% static 'app/images/details-icon-bootstrap.png' %}" alt="alternative">
+                                <img src="{% static 'app/images/details-icon-javascript.png' %}" alt="alternative">
+                                
                                 <!-- <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original-wordmark.svg"> -->
                                 <!-- <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain-wordmark.svg"> -->
                             </div> <!-- end of icons-container -->
@@ -598,12 +604,26 @@
                     <div id="error-message" style="color: red;"></div>
                     <form id="contactForm" method="post" action="{% url 'app:home' %}">
                         {% csrf_token %}
+                        <!-- {{ form.as_p }} -->
                         <div class="form-group">
+                            {{ form.name }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.phone }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.message }}
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button" onclick="submitContactForm()">Submit</button>
+                        </div>
+
+                        <!-- <div class="form-group">
                             {{ form.as_p }}
-                        </div>
-                        <div class="form-group">
+                        </div> -->
+                        <!-- <div class="form-group">
                             <button type="submit" class="form-control-submit-button">Submit</button>
-                        </div>
+                        </div> -->
                         <!-- <div class="form-group">
                             <input type="text" name="name" class="form-control-input" id="cname" required>
                             <label class="label-control" for="cname">Name</label>
@@ -618,8 +638,8 @@
                         </div>
                         <div class="form-group">
                             <button type="button" class="form-control-submit-button" onclick="submitContactForm()">Submit</button>
-                        </div>
-                    </form> -->
+                        </div> -->
+                    </form>
                     <!-- end of contact form -->
 
                 </div> <!-- end of col -->
@@ -716,6 +736,11 @@
     	
     <!-- Scripts -->
     <script>
+        function redirectToCV() {
+            // Replace 'https://example.com/cv.pdf' with the desired URL
+            window.location.href = '{% url "app:resume" %}';
+        }
+
         document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault();
       
