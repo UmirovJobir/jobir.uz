@@ -40,7 +40,9 @@
         <div class="container">
             
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="{% url 'app:home' %}">Jobir</a>  <!--<img alt="alternative"> src="{% static 'app/images/logo.svg' %}"-->
+            <!-- <a class="navbar-brand logo-image" href="{% url 'app:home' %}"><img alt="alternative" src="{% static 'app/images/logo.svg' %}"></a> -->
+            
+            <h1><a class="navbar-brand logo-text page-scroll" href="{% url 'app:home' %}">Jobir</a></h1>
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Mark</a> -->
@@ -192,6 +194,7 @@
                             <h6>42.ru</h6>
                             <h6>Skillbox.ru</h6>
                             <h6>Mohirdev.uz</h6>
+                            <h6>Udemy.com</h6>
                     </div>
                 </div>
             </div> <!-- end of row -->
@@ -361,7 +364,7 @@
                 <div class="col-lg-4">
                     <div class="text-container-card">
                         <div class="image-container">
-                            <a href="https://imodels.uz/">
+                            <a href="https://imodels.uz/" target="_blank">
                                 <img class="img-fluid" src="{% static 'app/images/imodels.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
@@ -372,7 +375,7 @@
                 <div class="col-lg-4">
                     <div class="text-container-card">
                         <div class="image-container">
-                            <a href="https://agrozamin.uz/">
+                            <a href="https://agrozamin.uz/" target="_blank">
                                 <img class="img-fluid" src="{% static 'app/images/agrozamin.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
@@ -383,7 +386,7 @@
                 <div class="col-lg-4">
                     <div class="text-container-card">
                         <div class="image-container">
-                            <a href="https://asr.gov.uz/">
+                            <a href="https://asr.gov.uz/" target="_blank">
                                 <img class="img-fluid" src="{% static 'app/images/strategy_agency.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
@@ -397,7 +400,7 @@
                 <div class="col-lg-4">
                     <div class="text-container-card">
                         <div class="image-container">
-                            <a href="https://dr-boboev.com/">
+                            <a href="https://dr-boboev.com/" target="_blank">
                                 <img class="img-fluid" src="{% static 'app/images/dr-boboev.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
@@ -408,7 +411,7 @@
                 <div class="col-lg-4">
                     <div class="text-container-card">
                         <div class="image-container">
-                            <a href="https://www.agros.uz/">
+                            <a href="https://www.agros.uz/" target="_blank">
                                 <img class="img-fluid" src="{% static 'app/images/agros.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
@@ -419,7 +422,7 @@
                 <div class="col-lg-4">
                     <div class="text-container-card">
                         <div class="image-container">
-                            <a href="https://endo.uz/">
+                            <a href="https://endo.uz/" target="_blank">
                                 <img class="img-fluid" src="{% static 'app/images/endo.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
@@ -754,7 +757,7 @@
                 if (data.status === 'success') {
                     var confirmation = confirm(data.message);
                     if (confirmation) {
-                        window.location.href = '{% url "app:home" %}';
+                        window.location.href = '{% url "app:resume" %}';
                     } else {
                         location.reload();
                     }

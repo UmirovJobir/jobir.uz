@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/850b43de8f.js" crossorigin="anonymous"></script>
+
+    <link href="{% static 'app/css/styles.css' %}" rel="stylesheet">
+
+    <title>Resume</title>
+
+    <style type="text/css">
+        * { margin: 0; padding: 0; }
+        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
+        .clear { clear: both; }
+        #page-wrap { width: 800px; margin: 40px auto 60px; }
+        #pic { float: right; margin: -30px 0 0 0; }
+        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        p { margin: 0 0 16px 0; }
+        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
+        a:hover { border-bottom-style: solid; color: black; }
+        ul { margin: 0 0 32px 17px; }
+        #objective { width: 500px; float: left; }
+        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+        dd { width: 600px; float: right; }
+        dd.clear { float: none; margin: 0; height: 15px; }
+    </style>
+</head>
+
+<body>
+
+    <div id="page-wrap">
+    
+        <img src="{% static 'app/images/portfolio.png' %}" width="30%" alt="Photo of Cthulu" id="pic" />
+    
+        <div id="contact-info" class="vcard">
+        
+            <!-- Microformats! -->
+        
+            <h1 class="fn">Umirov Jobir Utkir o'g'li</h1>
+        
+            <p>
+                <i class="fa-solid fa-phone"></i> <span class="tel">+998 (97) 736-68-98</span><br />
+                <i class="fa-solid fa-envelope"></i> <a class="email" href="mailto:greatoldone@lovecraft.com">jobirumirovmoliya@gmail.com</a>
+            </p>
+        </div>
+                
+        <div id="objective">
+            <p>
+                Высоко мотивированный разработчик программного обеспечения с 2-летним опытом
+                разработки и поставки программных решений. Сильный командный игрок с отличными
+                коммуникативными навыками и стремлением к качеству.
+            </p>
+        </div>
+        
+        <div class="clear"></div>
+        
+        <dl>
+            <dd class="clear"></dd>
+            
+            <dt>Education</dt>
+            <dd>
+                <h2>Ташкентский финансовый институт <span>2022</span></h2>
+                <p>Экономическая безопасность</p>
+
+                <h2>Python Backend Development <span>2021</span></h2>
+                <p>PDP Academy</p>
+            </dd>
+
+            <dd class="clear"></dd>
+            
+            <dt>Courses</dt>
+            <dd>
+                <h2>Express Backend</h2>
+                <p>42.uz</p>
+                
+                <h2>The Profession of a Python Developer</h2>
+                <p>skillbox.ru</p>
+
+                <h2>Mukammal Telegram Bot (Aiogram)</h2>
+                <p>mohirdev.uz</p>
+            </dd>
+            
+            <dd class="clear"></dd>
+
+            <dt>Experience</dt>
+            <dd>
+                <h2>Doomsday Cult <span>Leader/Overlord - Baton Rogue, LA - 1926-2010</span></h2>
+                <ul>
+                    <li>Inspired and won highest peasant death competition among servants</li>
+                    <li>Helped coordinate managers to grow cult following</li>
+                    <li>Provided untimely deaths to all who opposed</li>
+                </ul>
+                
+                <h2>The Watering Hole <span>Bartender/Server - Milwaukee, WI - 2009</span></h2>
+                <ul>
+                    <li>Worked on grass-roots promotional campaigns</li>
+                    <li>Reduced theft and property damage percentages</li>
+                    <li>Janitorial work, Laundry</li>
+                </ul> 
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Hobbies</dt>
+            <dd>World Domination, Deep Sea Diving, Murder Most Foul</dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>References</dt>
+            <dd>Available on request</dd>
+            
+            <dd class="clear"></dd>
+
+            <dd class="clear"></dd>
+            
+            <dt>Skills</dt>
+            <dd>
+                <div class="split-resume">
+                    <div class="icons-container">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg">
+                        <img src="{% static 'app/images/aiogram.png' %}" alt="alternative">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain-wordmark.svg">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-plain-wordmark.svg">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg">
+                        <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg">
+                        <img src="{% static 'app/images/ci_cd.jpeg' %}" alt="alternative">
+                        <img src="{% static 'app/images/details-icon-html.png' %}" alt="alternative">
+                        <img src="{% static 'app/images/details-icon-css.png' %}" alt="alternative">
+                        <img src="{% static 'app/images/details-icon-bootstrap.png' %}" alt="alternative">
+                        <img src="{% static 'app/images/details-icon-javascript.png' %}" alt="alternative">                        
+                    </div>
+                </div>
+            </dd>
+            
+            <dd class="clear"></dd>
+        </dl>
+        
+        <div class="clear"></div>
+    
+    </div>
+
+    
+
+</body>
+
+</html>

@@ -622,7 +622,8 @@ input[type='checkbox'] {
 .split .area-1 {
 	height: 430px;
 	/* background: linear-gradient(to bottom right, rgba(25, 26, 29, 0.5), rgba(25, 26, 29, 0.5)), url('../images/details-background.jpg') center center no-repeat; */
-	background: linear-gradient(to bottom right, rgba(25, 26, 29, 0.5), rgba(25, 26, 29, 0.5)), url('../images/myphoto.jpg') center center no-repeat;
+	/* background: linear-gradient(to bottom right, rgba(25, 26, 29, 0.5), rgba(25, 26, 29, 0.5)), url('../images/myphoto.jpg') center center no-repeat; */
+	background: url('../images/newphoto.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -1379,4 +1380,21 @@ input[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media (min-width: 992px) {
+	/* Details */
+	.split-resume {
+		height: 760px;
+	}
+}
+
+.split-resume .icons-container {
+    margin-top: 0;
+}
+
+.split-resume .icons-container img {
+	width: 50px;
+	margin-right: 0.625rem;
+	margin-bottom: 0.75rem;
 }

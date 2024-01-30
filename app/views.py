@@ -7,19 +7,8 @@ from django.http import JsonResponse
 
 from .forms import GetInTouchForm
 
-def home(request):
-    return render(request, 'app/index.html')
 
-def my_resume_download_view(request):
-    """The My Resume Download View
-        uses for download resume."""
-    if request:
-        filename = 'static/app/resume.pdf' 
-        response = FileResponse(open(filename, 'rb'))
-
-        return response
-    
-def contact_view(request):
+def home_contact(request):
     if request.method == 'POST':
         form = GetInTouchForm(request.POST)
         if form.is_valid():
@@ -30,3 +19,17 @@ def contact_view(request):
     else:
         form = GetInTouchForm()
     return render(request, 'app/index.html', {'form': form})
+
+
+def my_resume(request):
+    return render(request, 'app/resume.html')
+
+def my_resume_download_view(request):
+    """The My Resume Download View
+        uses for download resume."""
+    if request:
+        filename = 'static/app/resume.pdf' 
+        response = FileResponse(open(filename, 'rb'))
+
+        return response
+    
