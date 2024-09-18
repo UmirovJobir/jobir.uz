@@ -93,19 +93,19 @@
                         </a>
                     </span> -->
                     <span class="fa-stack">
-                        <a href="https://t.me/jobir_umirov">
+                        <a href="https://t.me/jobir_umirov" target="_blank">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fa-brands fa-telegram fa-stack-1x"></i>
                         </a>
                     </span>
                     <span class="fa-stack">
-                        <a href="https://www.linkedin.com/in/jobir-umirov-7a02b717a/">
+                        <a href="https://www.linkedin.com/in/jobir-umirov-7a02b717a/" target="_blank">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fa-brands fa-linkedin-in fa-stack-1x"></i>
                         </a>
                     </span>
                     <span class="fa-stack">
-                        <a href="https://github.com/UmirovJobir">
+                        <a href="https://github.com/UmirovJobir" target="_blank">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fa-brands fa-github fa-stack-1x"></i>
                         </a>
@@ -227,9 +227,10 @@
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg">
+                                <img src="{% static 'app/images/fastapi.png' %}" alt="alternative" width='500'>
                                 <img src="{% static 'app/images/aiogram.png' %}" alt="alternative">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
-                                <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain-wordmark.svg">
+                                <img src="{% static 'app/images/laravel-mark.png' %}" alt="alternative">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg">
@@ -237,7 +238,7 @@
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg">
                                 <img class="iconify icon-svg  text-aqua" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg">
-                                <img src="{% static 'app/images/ci_cd.jpeg' %}" alt="alternative">
+                                <img src="{% static 'app/images/cicd.png' %}" alt="alternative">
                                 <img src="{% static 'app/images/details-icon-html.png' %}" alt="alternative">
                                 <img src="{% static 'app/images/details-icon-css.png' %}" alt="alternative">
                                 <img src="{% static 'app/images/details-icon-bootstrap.png' %}" alt="alternative">
@@ -365,10 +366,11 @@
                     <div class="text-container-card">
                         <div class="image-container">
                             <a href="https://imodels.uz/" target="_blank">
-                                <img class="img-fluid" src="{% static 'app/images/imodels.png' %}" alt="alternative">
+                                <img class="img-fluid" src="{% static 'app/images/imodels_home_page.jpg' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> iModels 
+                        {% comment %} <p><strong>For:</strong> {% endcomment %}
+                            <p>iModels 
                             <!-- <strong>Project:</strong> started a new website from ground up for a new product <a class="blue" href="project.html">details</a></p> -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
@@ -376,23 +378,24 @@
                     <div class="text-container-card">
                         <div class="image-container">
                             <a href="https://agrozamin.uz/" target="_blank">
-                                <img class="img-fluid" src="{% static 'app/images/agrozamin.png' %}" alt="alternative">
+                                <img class="img-fluid" src="{% static 'app/images/agrobusiness.jpg' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Agrozamin
+                        {% comment %} <p><strong>For:</strong> {% endcomment %}
+                            <p>AgroBusiness
                             <!-- <strong>Project:</strong> developed a new forum for the Visodream community <a class="blue" href="project.html">details</a></p> -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-4">
                     <div class="text-container-card">
                         <div class="image-container">
-                            <a href="https://asr.gov.uz/" target="_blank">
-                                <img class="img-fluid" src="{% static 'app/images/strategy_agency.png' %}" alt="alternative">
+                            <a href="https://agrozamin.uz/" target="_blank">
+                                <img class="img-fluid" src="{% static 'app/images/uzimizniki.jpg' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> 
-                            Agency for Strategic Reforms
-                            <!-- <strong>Project:</strong> complete redesign of their corporate website and platform <a class="blue" href="project.html">details</a></p> -->
+                        {% comment %} <p><strong>For:</strong> {% endcomment %}
+                            <p> Agrozamin Uzimizniki
+                            <!-- <strong>Project:</strong> developed a new forum for the Visodream community <a class="blue" href="project.html">details</a></p> -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -404,7 +407,8 @@
                                 <img class="img-fluid" src="{% static 'app/images/dr-boboev.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Dr-Boboev
+                        {% comment %} <p><strong>For:</strong> {% endcomment %}
+                            <p>Dr-Boboev
                             <!-- <strong>Project:</strong> created a custom video editing and upload web app <a class="blue" href="project.html">details</a></p> -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
@@ -415,7 +419,8 @@
                                 <img class="img-fluid" src="{% static 'app/images/agros.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Uzagrosugurta
+                        {% comment %} <p><strong>For:</strong> {% endcomment %}
+                            <p>Uzagrosugurta
                              <!-- <strong>Project:</strong> web design for their corporate websites and landing pages <a class="blue" href="project.html">details</a></p> -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
@@ -426,11 +431,38 @@
                                 <img class="img-fluid" src="{% static 'app/images/endo.png' %}" alt="alternative">
                             </a>
                         </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> EndoSystems
+                        {% comment %} <p><strong>For:</strong> {% endcomment %}
+                            <p>EndoSystems
                              <!-- <strong>Project:</strong> started a new website from ground up for a new product <a class="blue" href="project.html">details</a></p> -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-container-card">
+                        <div class="image-container">
+                            <a href="https://asr.gov.uz/" target="_blank">
+                                <img class="img-fluid" src="{% static 'app/images/strategy_agency.png' %}" alt="alternative">
+                            </a>
+                        </div> <!-- end of image-container -->
+                        <p><strong>For:</strong> 
+                            <p>Agency for Strategic Reforms
+                            <!-- <strong>Project:</strong> complete redesign of their corporate website and platform <a class="blue" href="project.html">details</a></p> -->
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-container-card">
+                        <div class="image-container">
+                            <a href="https://asr.gov.uz/" target="_blank">
+                                <img class="img-fluid" src="{% static 'app/images/agropay.jpg' %}" alt="alternative">
+                            </a>
+                        </div> <!-- end of image-container -->
+                        {% comment %} <p><strong>For:</strong>  {% endcomment %}
+                            <p>AgroPay
+                            <!-- <strong>Project:</strong> complete redesign of their corporate website and platform <a class="blue" href="project.html">details</a></p> -->
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div>
         </div> <!-- end of container -->
     </div> <!-- end of basic-4 -->
     <!-- end of works -->
