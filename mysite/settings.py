@@ -138,3 +138,6 @@ TELEGRAMBOT = {
     'token': env.str('TELEBOT_TOKEN'),
     'chat_id': env.str('TELEBOT_CHAT_ID')
 }
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
