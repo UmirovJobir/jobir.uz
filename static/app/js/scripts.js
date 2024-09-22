@@ -74,4 +74,33 @@
 		$(this).blur();
 	});
 
+    /* Popup Handling */
+    // Close popup on click
+    $(document).on('click', '.close-popup', function() {
+        $(this).closest('.popup').fadeOut();
+    });
+
+    // Auto-close popup after 10 seconds
+    setTimeout(function() {
+        $('.popup').fadeOut();
+    }, 10000);
+
+    /* Telegram Web App Logic */
+    $(document).ready(function() {
+        // Ensure the Telegram Web App is fully ready
+        Telegram.WebApp.ready();
+    
+        const user = Telegram.WebApp.initDataUnsafe.user;
+    
+        if (user) {
+            // Check if the element with ID 'username' is present before modifying it
+            const usernameElement = document.getElementById('username');
+            if (usernameElement) {
+                usernameElement.textContent = user.first_name + " " + user.last_name;
+            }
+        } else {
+            document.getElementById('username').textContent = 'Гость';
+        }
+    });
+    
 })(jQuery);

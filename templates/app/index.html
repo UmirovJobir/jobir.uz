@@ -123,6 +123,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
+                        <h1 class="h1-large">Добро пожаловать, <span id="username"></span>!</h1>
                         <h1 class="h1-large">I love to create beautiful and efficient websites</h1>
                         <a class="btn-solid-lg page-scroll" href="#about">Discover</a>
                         <a class="btn-outline-lg page-scroll" href="#contact"><i class="fas fa-user"></i>Contact Me</a>
@@ -317,6 +318,28 @@
                     <h2 class="h2-heading">Delivered projects</h2>
                     <!-- <p class="p-heading">Listed below are some of the most representative projects I've worked on. They range from basic web design for presentation sites to advanced web development for online shops</p> -->
                     <p class="p-heading">Listed below are some of the most representative projects I've worked on. They range from basic landing page websites to advanced web development for online shops and marketplaces</p>
+                    
+                    <!-- Works -->
+                    <div class="basic-4">
+                        <div class="container">
+                            <div class="row">
+                                {% for project in projects %}
+                                <div class="col-lg-4">
+                                    <div class="text-container-card">
+                                        <div class="image-container">
+                                            <a href="{{ project.link }}" target="_blank">
+                                                <img class="img-fluid" src="{{ project.image.url }}" alt="{{ project.name }}">
+                                            </a>
+                                        </div> <!-- end of image-container -->
+                                        <p>{{ project.name }}</p>
+                                    </div> <!-- end of text-container -->
+                                </div> <!-- end of col -->
+                                {% endfor %}
+                            </div> <!-- end of row -->
+                        </div> <!-- end of container -->
+                    </div> <!-- end of basic-4 -->
+                    <!-- end of works -->
+                    
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -324,26 +347,7 @@
     <!-- end of projects -->
 
 
-<!-- Works -->
-<div class="basic-4">
-    <div class="container">
-        <div class="row">
-            {% for project in projects %}
-            <div class="col-lg-4">
-                <div class="text-container-card">
-                    <div class="image-container">
-                        <a href="{{ project.link }}" target="_blank">
-                            <img class="img-fluid" src="{{ project.image.url }}" alt="{{ project.name }}">
-                        </a>
-                    </div> <!-- end of image-container -->
-                    <p>{{ project.name }}</p>
-                </div> <!-- end of text-container -->
-            </div> <!-- end of col -->
-            {% endfor %}
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of basic-4 -->
-<!-- end of works -->
+
 
 
     <!-- Testimonials -->
@@ -515,7 +519,7 @@
                 <div class="col-lg-12">
                     <!-- Contact Form -->
                     <div id="error-message" style="color: red;"></div>
-                    <form id="contactForm" method="post" action="{% url 'app:home' %}">
+                    <form method="post" action="{% url 'app:home' %}">
                         {% csrf_token %}
                         <!-- {{ form.as_p }} -->
                         <div class="form-group">
@@ -528,7 +532,8 @@
                             {{ form.message }}
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button" onclick="submitContactForm()">Submit</button>
+                            <button type="submit" class="form-control-submit-button">Submit</button>
+                            <!-- <button type="submit" class="form-control-submit-button" onclick="submitContactForm()">Submit</button> -->
                         </div>
                     </form>
                     <!-- end of contact form -->
@@ -539,6 +544,19 @@
     </div> <!-- end of form-1 -->  
     <!-- end of contact -->
     <!-- <div id="response-message"></div> -->
+
+    
+    <!-- Popup Modal -->
+    {% if messages %}
+    <div class="popup-container">
+        {% for message in messages %}
+        <div class="popup {% if message.tags %}{{ message.tags }}{% endif %}">
+            <span class="popup-message">{{ message }}</span>
+            <button class="close-popup">&times;</button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
 
 
     <!-- Footer -->
@@ -617,60 +635,10 @@
     
     	
     <!-- Scripts -->
-    <script>
-        function redirectToCV() {
-            window.location.href = '{% url "app:resume" %}';
-        }
-
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-      
-            // Use Fetch API to submit the form asynchronously
-            fetch(event.target.action, {
-              method: 'POST',
-              body: new FormData(event.target),
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    var confirmation = confirm(data.message);
-                    if (confirmation) {
-                        window.location.href = '{% url "app:resume" %}';
-                    } else {
-                        location.reload();
-                    }
-                }else{
-                    $('#error-message').text('Error: Phone must be in the format 998901234567');
-                }
-            });
-          });
-
-
-        /*function submitContactForm() {
-            $.ajax({
-                url: '{% url "app:home" %}',
-                type: 'POST',
-                data: $('#contactForm').serialize(),
-                success: function (response) {
-                    $('#response-message').text(response.message);
-                    // $('#contactForm')[0].reset();
-
-                    var confirmation = confirm(response.message);
-                    if (confirmation) {
-                        window.location.href = '{% url "app:home" %}';
-                    } else {
-                        location.reload();
-                    }
-                },
-                error: function (error) {
-                    $('#error-message').text('Error: Phone must be in the format 998901234567');
-                }
-            });
-        }*/
-    </script>
     <script src="{% static 'app/js/jquery.min.js' %}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="{% static 'app/js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
     <script src="{% static 'app/js/jquery.easing.min.js' %}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
     <script src="{% static 'app/js/scripts.js' %}"></script> <!-- Custom scripts -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>

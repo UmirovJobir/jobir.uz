@@ -1,6 +1,7 @@
+from django.contrib import messages
 from django.shortcuts import render
+from django.shortcuts import redirect
 from django.http.response import FileResponse
-from django.http import JsonResponse
 
 from .forms import GetInTouchForm
 from .models import Project
@@ -11,12 +12,14 @@ def home_contact(request):
         form = GetInTouchForm(request.POST)
         if form.is_valid():
             form.save()
-            return JsonResponse({'status': 'success', 'message': 'Thank you for your message! We will get in touch with you soon.'})
+            messages.success(request, 'Thank you for your message! We will get in touch with you soon.')
+            return redirect('app:home')
         else:
-            return JsonResponse({'status': 'error', 'message': 'Invalid form submission.'}, status=400)
+            messages.error(request, 'Invalid form submission. Please check the form and try again.')
     else:
         form = GetInTouchForm()
         projects = Project.objects.filter(status=True)
+    
     return render(request, 'app/index.html', {'form': form, 'projects': projects})
 
 

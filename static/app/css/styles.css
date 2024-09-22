@@ -170,6 +170,7 @@ a:hover {
 }
 
 .btn-solid-lg {
+	border-radius: 20px;
 	display: inline-block;
 	padding: 1.625rem 2.625rem 1.625rem 2.625rem;
 	border: 1px solid #0b36a8;
@@ -602,6 +603,7 @@ input[type='checkbox'] {
 	margin-bottom: 3rem;
 	padding: 3.5rem 1rem 2.125rem 1rem;
 	border: 1px solid #cfd7de;
+	border-radius: 20px;
 }
 
 .basic-2 .fas,
@@ -651,7 +653,7 @@ input[type='checkbox'] {
 /*     Projects     */
 /********************/
 .basic-3 {
-	/* padding-top: 7.75rem; */
+	padding-top: 7.75rem;
 	padding-bottom: 1rem;
 }
 
@@ -671,6 +673,7 @@ input[type='checkbox'] {
 
 .basic-3 .image-container {
 	margin-bottom: 1rem;
+	
 }
 
 /* Hover Animation */
@@ -713,11 +716,13 @@ input[type='checkbox'] {
 	overflow: hidden;
 	margin-right: auto;
 	margin-left: auto;
+	border-radius: 20px;
 }
 
 .basic-4 .image-container img {
 	margin: 0;
 	transition: all 0.2s;
+	border-radius: 20px;
 }
 
 .basic-4 .image-container:hover img {
@@ -1397,4 +1402,37 @@ input[type="submit"] {
 	width: 50px;
 	margin-right: 0.625rem;
 	margin-bottom: 0.75rem;
+}
+
+.popup-container {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.popup {
+    background-color: #0b36a8; /* Success message */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.popup.error {
+    background-color: #f44336; /* Error message */
+}
+
+.close-popup {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
