@@ -3,7 +3,7 @@ from django.http.response import FileResponse
 from django.http import JsonResponse
 
 from .forms import GetInTouchForm
-from .models import Project, Resume
+from .models import Project
 
 
 def home_contact(request):
@@ -21,15 +21,13 @@ def home_contact(request):
 
 
 def my_resume(request):
-    resume = Resume.objects.last()
-    filename = resume.file.url if resume else None
-    return render(request, 'app/resume.html', {'filename': filename})
+    return render(request, 'app/resume.html')
 
 def my_resume_download_view(request):
     """The My Resume Download View
         uses for download resume."""
     if request:
-        filename = Resume.objects.last().file.path
+        filename = 'static/app/resume.pdf' 
         response = FileResponse(open(filename, 'rb'))
 
         return response

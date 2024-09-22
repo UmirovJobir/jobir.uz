@@ -1,4 +1,3 @@
-import os
 from django.db import models
 from django.core.validators import RegexValidator
 
@@ -31,24 +30,3 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
-
-class Resume(models.Model):
-    file = models.FileField(upload_to='resumes/')
-    
-    def __str__(self):
-        return os.path.basename(self.file.name)
-    
-    def save(self, *args, **kwargs):
-        try:
-            this = Resume.objects.get(id=self.id)
-            if this.file != self.file and os.path.isfile(this.file.path):
-                os.remove(this.file.path)
-        except Resume.DoesNotExist:
-            pass
-        super().save(*args, **kwargs)
-    
-    def delete(self, *args, **kwargs):
-        if self.file:
-            if os.path.isfile(self.file.path):
-                os.remove(self.file.path)
-        super().delete(*args, **kwargs)
