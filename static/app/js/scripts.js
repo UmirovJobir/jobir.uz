@@ -96,7 +96,7 @@
             // Check if the element with ID 'username' is present before modifying it
             const usernameElement = document.getElementById('username');
             if (usernameElement) {
-                usernameElement.textContent = "<br>" + user.first_name + " " + user.last_name;
+                usernameElement.innerHTML = "Wellcome<br>" + user.first_name + " " + user.last_name;
             }
         }
         // else {
