@@ -104,9 +104,11 @@
         // }
     });
 
-    /* Confirmation for Closing Telegram WebApp */
-    Telegram.WebApp.onEvent('backButtonClicked', function() {
-        // Show confirmation before closing the app
+    /* Show the back button */
+    Telegram.WebApp.BackButton.show();
+
+    /* Confirmation for Closing Telegram WebApp when back button is clicked */
+    Telegram.WebApp.BackButton.onClick(function() {
         let confirmation = confirm('Changes that you made may not be saved. Do you really want to close?');
         if (confirmation) {
             Telegram.WebApp.close();  // Close the app if the user confirms
