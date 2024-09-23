@@ -104,15 +104,20 @@
         // }
     });
 
-    /* Show the back button */
-    Telegram.WebApp.BackButton.show();
+    /* Confirmation for Closing Telegram WebApp */
+    Telegram.WebApp.onEvent('backButtonClicked', function() {
+        // Show the modal
+        document.getElementById('myModal').style.display = 'block';
+    });
 
-    /* Confirmation for Closing Telegram WebApp when back button is clicked */
-    Telegram.WebApp.BackButton.onClick(function() {
-        let confirmation = confirm('Changes that you made may not be saved. Do you really want to close?');
-        if (confirmation) {
-            Telegram.WebApp.close();  // Close the app if the user confirms
-        }
+    // Handle the cancel button (if the user doesn't want to close)
+    document.getElementById('cancelBtn').addEventListener('click', function() {
+        document.getElementById('myModal').style.display = 'none';
+    });
+
+    // Handle the close button (if the user wants to close the app)
+    document.getElementById('closeBtn').addEventListener('click', function() {
+        Telegram.WebApp.close(); // Close the app
     });
     
     
