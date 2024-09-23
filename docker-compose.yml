@@ -10,6 +10,7 @@ services:
     volumes:
       - ./db:/usr/src/app/db
       - ./static:/usr/src/app/static
+      - ./media:/usr/src/app/media
   
   nginx:
     restart: unless-stopped
