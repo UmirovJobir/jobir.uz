@@ -10,8 +10,6 @@ services:
     volumes:
       - ./db:/usr/src/app/db
       - ./static:/usr/src/app/static
-    depends_on:
-      - nginx
   
   nginx:
     restart: unless-stopped
