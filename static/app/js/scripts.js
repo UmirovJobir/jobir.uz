@@ -103,5 +103,15 @@
         //     document.getElementById('username').textContent = 'Гость';
         // }
     });
+
+    /* Confirmation for Closing Telegram WebApp */
+    Telegram.WebApp.onEvent('backButtonClicked', function() {
+        // Show confirmation before closing the app
+        let confirmation = confirm('Changes that you made may not be saved. Do you really want to close?');
+        if (confirmation) {
+            Telegram.WebApp.close();  // Close the app if the user confirms
+        }
+    });
+    
     
 })(jQuery);
