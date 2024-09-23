@@ -567,6 +567,10 @@ input[type='checkbox'] {
 	margin-bottom: 3rem;
 }
 
+.basic-1 .no-underline {
+	text-decoration: none;
+}
+
 .basic-1 .time {
 	margin-bottom: 0.5rem;
 	color: #0b36a8;

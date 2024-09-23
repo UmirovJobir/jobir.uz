@@ -143,9 +143,12 @@
                     <div class="text-container first">
                         <h2>Hi there I'm Jobir,</h2>
                         <p>And I love to create beautiful and efficient websites for my customers. I love going through the entire process with the customer from concept, to design and then development and launch</p>
-                        <button class="btn-rounded btn btn-outline-primary mt-4" onclick="redirectToCV()">
+                        {% comment %} <button class="btn-rounded btn btn-outline-primary mt-4" onclick="redirectToCV()">
                             <img src="{% static 'app/images/profile.png'%}" width="25">&nbsp;&nbsp;My Resume
-                        </button>
+                        </button> {% endcomment %}
+                        <a class="btn-rounded btn btn-outline-primary mt-4 no-underline" href="{% url 'app:resume' %}">
+                            <img src="{% static 'app/images/profile.png'%}" width="25">&nbsp;&nbsp;My Resume
+                        </a>                        
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-4">
