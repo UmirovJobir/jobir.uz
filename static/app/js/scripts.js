@@ -98,9 +98,10 @@
             if (usernameElement) {
                 usernameElement.textContent = user.first_name + " " + user.last_name;
             }
-        } else {
-            document.getElementById('username').textContent = 'Гость';
         }
+        // else {
+        //     document.getElementById('username').textContent = 'Гость';
+        // }
     });
     
 })(jQuery);

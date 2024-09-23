@@ -1006,7 +1006,7 @@ a:hover.back-to-top {
 	/* Header */
 	.header {
 		padding-top: 11rem;
-		padding-bottom: 9rem;
+		/* padding-bottom: 9rem; */
 	}
 	/* end of header */
 
@@ -1433,6 +1433,6 @@ input[type="submit"] {
     font-size: 18px;
     cursor: pointer;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1px;
+    right: 1px;
 }
