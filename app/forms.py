@@ -8,6 +8,12 @@ class GetInTouchForm(forms.ModelForm):
         fields  = '__all__'
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Name'}),
-            'phone': forms.NumberInput(attrs={'placeholder': 'Phone', 'value': '998'}),
+            # 'phone': forms.TextInput(attrs={'placeholder': 'Phone', 'value': '998'}),
+            'phone': forms.NumberInput(attrs={
+                'placeholder': 'Phone', 
+                'value': '998', 
+                'inputmode': 'numeric', 
+                'pattern': '[0-9]*'
+            }),
             'message': forms.Textarea(attrs={'placeholder': 'Project details'}),
         }
